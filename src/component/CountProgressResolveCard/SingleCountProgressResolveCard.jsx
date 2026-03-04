@@ -4,11 +4,11 @@ import shape2 from "../../assets/shape_2.png";
 
 const SingleCountProgressResolveCard = ({ title, count, gradient }) => {
   return (
-    <div>
+    <div >
       <div
-        className={`relative min-h-[180px] md:h-[220px]
+        className={`relative min-h-[160px] md:h-[180px]
       ${gradient}
-      rounded-xl shadow-lg px-6 md:px-10 py-8
+      rounded-xl shadow-lg px-6 md:px-10 py-5
       text-white flex flex-col justify-center text-center
       overflow-hidden`}
       >
