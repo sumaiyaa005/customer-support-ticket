@@ -5,53 +5,93 @@ const Navbar = () => {
     <div>
       {/* navstart */}
       <div className="bg-white border-b border-gray-200">
-        <div className="max-w-[1200px] mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            {/* LEFT */}
-            <div className="flex items-center gap-3">
-              {/* Mobile Menu */}
-              <div className="lg:hidden">
-                <button className="p-2">
-                  <svg
-                    className="h-6 w-6 text-gray-700"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M4 6h16M4 12h16M4 18h7"
-                    />
-                  </svg>
-                </button>
+        <div className="navbar py-0 flex-nowrap max-w-[1200px] mx-auto px-4">
+          {/* LEFT SIDE */}
+          <div className="navbar-start flex items-center gap-3">
+            {/* Mobile Menu */}
+            <div className="dropdown lg:hidden">
+              <div tabIndex={0} role="button" className="btn btn-ghost p-1">
+                <svg
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M4 6h16M4 12h16M4 18h7"
+                  />
+                </svg>
               </div>
 
-              {/* Logo */}
-              <h1 className="text-xl md:text-2xl font-bold text-gray-800 whitespace-nowrap">
-                CS — Ticket System
-              </h1>
+              {/* Dropdown */}
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content mt-3 z-[1] p-4 shadow bg-white rounded-box w-52"
+              >
+                <li>
+                  <a>Home</a>
+                </li>
+                <li>
+                  <a>FAQ</a>
+                </li>
+                <li>
+                  <a>Changelog</a>
+                </li>
+                <li>
+                  <a>Blog</a>
+                </li>
+                <li>
+                  <a>Download</a>
+                </li>
+                <li>
+                  <a>Contact</a>
+                </li>
+
+                <li className="mt-2">
+                  <button className="bg-gradient-to-r from-[#632EE3] to-[#9b5df2] text-white px-3 py-2 rounded-sm font-medium">
+                    + New Ticket
+                  </button>
+                </li>
+              </ul>
             </div>
 
-            {/* DESKTOP MENU */}
-            <div className="hidden lg:flex items-center space-x-6">
-              {["Home", "FAQ", "Changelog", "Blog", "Download", "Contact"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="text-gray-700 hover:text-[#632EE3] text-sm whitespace-nowrap"
-                  >
-                    {item}
-                  </a>
-                ),
-              )}
+            {/* LOGO */}
+            <a className="text-lg sm:text-xl md:text-2xl font-bold tracking-wide text-gray-800 whitespace-nowrap">
+              CS — Ticket System
+            </a>
+          </div>
 
-              <button className="bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white px-4 py-2 rounded-md text-sm font-medium whitespace-nowrap shadow-md">
-                + New Ticket
-              </button>
-            </div>
+          {/* DESKTOP MENU */}
+          <div className="navbar-end hidden lg:flex flex-nowrap">
+            <ul className="menu menu-horizontal items-center gap-2 flex-nowrap">
+              <li>
+                <a className="whitespace-nowrap">Home</a>
+              </li>
+              <li>
+                <a className="whitespace-nowrap">FAQ</a>
+              </li>
+              <li>
+                <a className="whitespace-nowrap">Changelog</a>
+              </li>
+              <li>
+                <a className="whitespace-nowrap">Blog</a>
+              </li>
+              <li>
+                <a className="whitespace-nowrap">Download</a>
+              </li>
+              <li>
+                <a className="whitespace-nowrap">Contact</a>
+              </li>
+
+              <li>
+                <button className="bg-gradient-to-r from-[#632EE3] to-[#9b5df2] text-white px-3 py-2 rounded-sm font-medium">
+                  + New Ticket
+                </button>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
