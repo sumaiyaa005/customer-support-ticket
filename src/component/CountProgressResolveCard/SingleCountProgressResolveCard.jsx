@@ -4,7 +4,7 @@ import shape2 from "../../assets/shape_2.png";
 
 const SingleCountProgressResolveCard = ({ title, count, gradient }) => {
   return (
-    <div >
+    <div>
       <div
         className={`relative min-h-[160px] md:h-[180px]
       ${gradient}
@@ -16,14 +16,14 @@ const SingleCountProgressResolveCard = ({ title, count, gradient }) => {
         <img
           src={shape1}
           alt=""
-          className="absolute left-0 top-0 h-full w-auto object-contain opacity-50"
+          className="absolute left-0 top-0 h-full w-auto object-contain opacity-100"
         />
 
         {/* Right Shape */}
         <img
           src={shape2}
           alt=""
-          className="absolute right-0 top-0 h-full w-auto object-contain opacity-50"
+          className="absolute right-0 top-0 h-full w-auto object-contain opacity-100"
         />
 
         {/* Content */}

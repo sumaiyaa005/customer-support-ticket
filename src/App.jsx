@@ -3,6 +3,7 @@ import Navbar from "./component/Navbar/Navbar";
 import CountProgressResolveCard from "./component/CountProgressResolveCard/CountProgressResolveCard";
 import CustomerCard from "./component/CustomersCard/CustomerCard";
 import { Suspense } from "react";
+import Footer from "./component/Footer/Footer";
 
 const fetchCustomerTicket = async () => {
   const res = await fetch("/tickets.json");
@@ -15,14 +16,13 @@ function App() {
     <div>
       <Navbar></Navbar>
       {/* Background Section */}
-      <div className="bg-[#F5F5F5] py-10">
+      <div className="bg-[#F5F5F5] ">
         <div className="max-w-[1200px] mx-auto px-4">
           {/* content start */}
           <CountProgressResolveCard />
           {/* customer card */}
-
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-16">
-            {/* Left: Customer Tickets - Wider (col-span-8) */}
+            {/* Left: Customer Tickets */}
             <div className="lg:col-span-9">
               <Suspense
                 fallback={
@@ -34,7 +34,7 @@ function App() {
                 ></CustomerCard>
               </Suspense>
             </div>
-            {/* Right: Task Status - Narrower (col-span-4) */}
+            {/* Right: Task Status */}
             <div className="lg:col-span-3">
               <h1 className="text-2xl font-bold mb-4">Task Status</h1>
               <div className="grid grid-cols-1 gap-4">
@@ -59,10 +59,17 @@ function App() {
                 </div>
               </div>
             </div>
+            {/* Right: Task Status end */}
           </div>
-        </div>
+          {/* customer card end */}
 
+          {/* ///////// */}
+        </div>
         {/* content end */}
+        {/* footer start */}
+        <Footer />
+
+        {/* footer end */}
       </div>
     </div>
   );
