@@ -54,22 +54,22 @@ const Footer = () => {
             <div className="flex flex-col text-sm leading-8 text-gray-400">
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-twitter text-lg"></i>
-                cstsystem
+                @CS — Ticket System
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-linkedin text-lg"></i>
-                cstsystem
+                @CS — Ticket System
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-facebook text-lg"></i>
-                cstsystem
+                @CS — Ticket System
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-solid fa-envelope text-lg"></i>
-                cstsystem
+                support@cst.com
               </a>
             </div>
           </div>

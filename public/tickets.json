@@ -4,8 +4,8 @@
     "title": "Login Issue",
     "description": "Customer cannot login after password reset.",
     "customer": "John Smith",
-    "priority": { "level": "HIGH PRIORITY ", "color": "red" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "HIGH-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-15"
   },
   {
@@ -13,8 +13,8 @@
     "title": "Payment Failed",
     "description": "Payment declined despite sufficient balance.",
     "customer": "Sarah Johnson",
-    "priority": { "level": "HIGH PRIORITY ", "color": "red" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "HIGH-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-16"
   },
   {
@@ -22,12 +22,8 @@
     "title": "Invoice Download Error",
     "description": "Invoice download button not working.",
     "customer": "Michael Brown",
-    "priority": { "level": "MEDIUM PRIORITY ", "color": "#FEBB0C" },
-    "status": {
-      "type": "In-Progress",
-      "color": "#FEBB0C",
-      "background": "#F8F3B9"
-    },
+    "priority": "MEDIUM-PRIORITY",
+    "status": "In-Progress",
     "createdAt": "2024-01-17"
   },
   {
@@ -35,8 +31,8 @@
     "title": "Billing Address Incorrect",
     "description": "Old billing address still showing.",
     "customer": "Emily Davis",
-    "priority": { "level": "LOW PRIORITY ", "color": "green" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "LOW-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-18"
   },
   {
@@ -44,12 +40,8 @@
     "title": "App Crash Issue",
     "description": "App crashes on launch.",
     "customer": "David Wilson",
-    "priority": { "level": "HIGH PRIORITY ", "color": "red" },
-    "status": {
-      "type": "In-Progress",
-      "color": "#FEBB0C",
-      "background": "#F8F3B9"
-    },
+    "priority": "HIGH-PRIORITY",
+    "status": "In-Progress",
     "createdAt": "2024-01-19"
   },
   {
@@ -57,8 +49,8 @@
     "title": "2FA Not Working",
     "description": "User not receiving verification code.",
     "customer": "Sophia Taylor",
-    "priority": { "level": "MEDIUM PRIORITY ", "color": "#FEBB0C" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "MEDIUM-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-20"
   },
   {
@@ -66,12 +58,8 @@
     "title": "Profile Upload Failed",
     "description": "Image upload error when updating profile.",
     "customer": "James Anderson",
-    "priority": { "level": "LOW PRIORITY ", "color": "green" },
-    "status": {
-      "type": "In-Progress",
-      "color": "#FEBB0C",
-      "background": "#F8F3B9"
-    },
+    "priority": "LOW-PRIORITY",
+    "status": "In-Progress",
     "createdAt": "2024-01-21"
   },
   {
@@ -79,8 +67,8 @@
     "title": "Subscription Auto Renewal",
     "description": "Auto renewal toggle not working.",
     "customer": "Olivia Martinez",
-    "priority": { "level": "MEDIUM PRIORITY ", "color": "#FEBB0C" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "MEDIUM-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-22"
   },
   {
@@ -88,8 +76,8 @@
     "title": "Missing Confirmation Email",
     "description": "Order confirmation email not received.",
     "customer": "Liam Thomas",
-    "priority": { "level": "HIGH PRIORITY ", "color": "red" },
-    "status": { "type": "Open", "color": "#02A53B", "background": "#B9F8CF" },
+    "priority": "HIGH-PRIORITY",
+    "status": "Open",
     "createdAt": "2024-01-23"
   },
   {
@@ -97,13 +85,8 @@
     "title": "Refund Not Processed",
     "description": "Refund requested but not received yet.",
     "customer": "Isabella Garcia",
-    "priority": { "level": "HIGH PRIORITY ", "color": "red" },
-    "status": {
-      "type": "In-Progress",
-      "color": "#FEBB0C",
-      "background": "#F8F3B9"
-    },
-
+    "priority": "HIGH-PRIORITY",
+    "status": "In-Progress",
     "createdAt": "2024-01-24"
   }
 ]
