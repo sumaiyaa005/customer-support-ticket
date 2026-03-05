@@ -5,7 +5,7 @@ const Navbar = () => {
     <div>
       {/* navstart */}
       <div className="bg-white border-b border-gray-200">
-        <div className="navbar py-0 flex-nowrap max-w-[1200px] mx-auto px-4">
+        <div className="navbar py-0 flex-nowrap px-6 md:px-12 lg:px-20 ">
           {/* LEFT SIDE */}
           <div className="navbar-start flex items-center gap-3">
             {/* Mobile Menu */}

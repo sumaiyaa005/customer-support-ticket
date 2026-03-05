@@ -3,8 +3,8 @@ import React from "react";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-black text-neutral-content pt-16 md:pt-20 px-6 md:px-12 lg:px-20 pb-8 text-start mt-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 md:gap-10">
+      <footer className="bg-black text-neutral-content pt-16 md:pt-20 px-6 md:px-12 lg:px-20 pb-8 text-start mt-16 mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-2 md:gap-10">
           {/* Description */}
           <div className="md:col-span-4">
             <h3 className="text-xl font-bold pb-2">CS – Ticket System</h3>
@@ -54,22 +54,22 @@ const Footer = () => {
             <div className="flex flex-col text-sm leading-8 text-gray-400">
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-twitter text-lg"></i>
-                csticketsystem
+                cstsystem
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-linkedin text-lg"></i>
-                cs-ticket-system
+                cstsystem
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-brands fa-facebook text-lg"></i>
-                csticketsystem
+                cstsystem
               </a>
 
               <a className="flex items-center gap-2 hover:text-white">
                 <i className="fa-solid fa-envelope text-lg"></i>
-                csticketsystem.com
+                cstsystem
               </a>
             </div>
           </div>

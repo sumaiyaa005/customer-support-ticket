@@ -9,49 +9,52 @@ const fetchCustomerTicket = async () => {
   const res = await fetch("/tickets.json");
   return res.json();
 };
-const customerTicketPromise = fetchCustomerTicket();
 
 function App() {
+  const customerTicketPromise = fetchCustomerTicket();
+
   return (
     <div>
-      <Navbar></Navbar>
-      {/* Background Section */}
-      <div className="bg-[#F5F5F5] ">
-        <div className="max-w-[1200px] mx-auto px-4">
-          {/* content start */}
+      <Navbar />
+
+      {/* Background */}
+      <div className="bg-[#F5F5F5] min-h-screen">
+        <div className="px-6 md:px-12 lg:px-20 pt-10">
+          {/* Top Cards */}
           <CountProgressResolveCard />
-          {/* customer card */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 mt-16">
-            {/* Left: Customer Tickets */}
+
+          {/* Main Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 mt-16">
+            {/* Left */}
             <div className="lg:col-span-9">
               <Suspense
                 fallback={
-                  <span className="loading loading-spinner loading-xl"></span>
+                  <div className="flex justify-center items-center h-40">
+                    <span className="loading loading-spinner loading-xl"></span>
+                  </div>
                 }
               >
-                <CustomerCard
-                  customerTicketPromise={customerTicketPromise}
-                ></CustomerCard>
+                <CustomerCard customerTicketPromise={customerTicketPromise} />
               </Suspense>
             </div>
-            {/* Right: Task Status */}
-            <div className="lg:col-span-3">
+
+            {/* Right Sidebar */}
+            <div className="lg:col-span-3 ">
               <h1 className="text-2xl font-bold mb-4">Task Status</h1>
-              <div className="grid grid-cols-1 gap-4">
-                {/* Complete Ticket Example 1 */}
-                <div className="card bg-base-100 shadow-xl">
+
+              <div className="grid gap-4">
+                <div className="card bg-white shadow-md">
                   <div className="card-body">
                     <h4 className="font-bold">
                       Payment Failed - Card Declined
                     </h4>
-                    <div className="bg-green-600 text-white p-2 rounded mt-2">
+                    <div className="bg-green-100 text-green-700 px-3 py-1 rounded-md text-sm mt-2 inline-block">
                       Complete
                     </div>
                   </div>
                 </div>
 
-                {/* Resolved Task */}
-                <div className="card  ">
+                <div className="card bg-white shadow-md">
                   <div className="card-body">
                     <h2 className="card-title">Resolved Task</h2>
                     <p>No resolved tasks yet.</p>
@@ -59,17 +62,11 @@ function App() {
                 </div>
               </div>
             </div>
-            {/* Right: Task Status end */}
           </div>
-          {/* customer card end */}
-
-          {/* ///////// */}
         </div>
-        {/* content end */}
-        {/* footer start */}
-        <Footer />
 
-        {/* footer end */}
+        {/* Footer */}
+        <Footer />
       </div>
     </div>
   );

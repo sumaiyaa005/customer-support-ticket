@@ -1,58 +1,61 @@
 import React from "react";
 import calender from "../../assets/calender.png";
+
 const SingleCustomerCard = ({ customerTicket }) => {
-  //   console.log(customerTickets);
   const { id, title, description, customer, priority, status, createdAt } =
     customerTicket;
 
   return (
-    <>
-      {/* Ticket 1 */}
-      <div className="card bg-base-100 shadow-xl">
-        <div className="p-5">
-          {/* Title & Status */}
-          <div className="flex justify-between items-center mt-2 mb-5">
-            <h4 className="font-bold">{title}</h4>
+    <div className="card bg-base-100 shadow-md rounded-xl">
+      <div className="p-4 md:p-6">
+        {/* Title + Status */}
+        <div className="flex justify-between items-center mb-3 md:mb-4 gap-2">
+          <h4 className="font-semibold text-xs sm:text-sm md:text-base">
+            {title}
+          </h4>
 
-            {/* Status Badge */}
-            <div
-              className="flex items-center gap-2 px-3 py-1 rounded-full text-sm"
-              style={{
-                backgroundColor: status.background,
-              }}
-            >
-              <div
-                className="w-2.5 h-2.5 rounded-full"
-                style={{ backgroundColor: status.color }}
-              ></div>
-              <span>{status.type}</span>
-            </div>
+          {/* Status */}
+          <div
+            className="flex items-center gap-1 md:gap-2 px-2 md:px-3 py-1 rounded-full text-[10px] sm:text-xs md:text-sm"
+            style={{ backgroundColor: status.background }}
+          >
+            <span
+              className="w-2 h-2 rounded-full"
+              style={{ backgroundColor: status.color }}
+            ></span>
+            <span>{status.type}</span>
+          </div>
+        </div>
+
+        {/* Description */}
+        <p className="text-[10px] sm:text-xs md:text-sm text-gray-500 mb-4 leading-relaxed">
+          {description}
+        </p>
+
+        {/* Bottom */}
+        <div className="flex justify-between items-center flex-wrap gap-3 text-[10px] sm:text-xs md:text-sm">
+          {/* ID + Priority */}
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span>{id}</span>
+            <span style={{ color: priority.color }}>{priority.level}</span>
           </div>
 
-          {/* Description */}
-          <p className="text-gray-500 pb-5">{description}</p>
+          {/* Customer + Date */}
+          <div className="flex items-center gap-2 text-gray-500">
+            <span>{customer}</span>
 
-          {/* ID & Priority */}
-          <div className="flex justify-between mt-5 text-sm">
-            <div className="flex items-center gap-3">
-              <p>{id}</p>
-              <p className="font-medium" style={{ color: priority.color }}>
-                {priority.level}
-              </p>
-            </div>
-
-            {/* Name & Date */}
-            <div className="flex items-center gap-3 text-gray-500">
-              <p>{customer}</p>
-              <p className="flex items-center gap-1">
-                <img src={calender} alt="Calendar icon" className="w-4 h-4" />
-                <span>{createdAt}</span>
-              </p>
-            </div>
+            <span className="flex items-center gap-1">
+              <img
+                src={calender}
+                alt="calendar"
+                className="w-3 h-3 md:w-4 md:h-4"
+              />
+              {createdAt}
+            </span>
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
