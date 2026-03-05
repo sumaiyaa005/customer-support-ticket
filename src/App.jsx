@@ -38,6 +38,7 @@ function App() {
     toast.success("Task completed and moved to Resolved!");
   };
 
+
   return (
     <div className="min-h-screen bg-base-200 flex flex-col">
       <Navbar />
